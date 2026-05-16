@@ -1,0 +1,226 @@
+/* ════════════════════════════════════════════════
+   style.css — Kuladeep Roy Ganugapenta Portfolio
+   ════════════════════════════════════════════════ */
+
+html, body {
+  background: #030303;
+  color: #f4f4f5;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body { overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+::selection { background: #38bdf8; color: #030303; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(244,244,245,0.10); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(244,244,245,0.22); }
+
+/* ── Glow link ── */
+.glow:hover { color: #38bdf8; transition: color .25s ease; }
+.glow { transition: color .25s ease; }
+
+/* ── Section tracker dot list ── */
+.track-item { display: flex; align-items: center; gap: 14px; padding: 6px 0; cursor: pointer; }
+.track-item .dot {
+  width: 6px; height: 6px; background: #52525b; border-radius: 999px;
+  transition: background-color .45s cubic-bezier(.2,.7,.2,1),
+              transform .45s cubic-bezier(.2,.7,.2,1),
+              box-shadow .45s cubic-bezier(.2,.7,.2,1);
+}
+.track-item .label {
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500;
+  color: #71717a;
+  transition: color .45s cubic-bezier(.2,.7,.2,1),
+              letter-spacing .45s cubic-bezier(.2,.7,.2,1),
+              transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.track-item:hover .label { color: #f4f4f5; }
+.track-item.is-active .dot {
+  background: #38bdf8;
+  transform: scale(1.8);
+  box-shadow: 0 0 14px rgba(56,189,248,0.65);
+}
+.track-item.is-active .label {
+  color: #38bdf8;
+  letter-spacing: 0.38em;
+  transform: translateX(4px);
+}
+
+/* ── Section anchor offsets ── */
+.section { scroll-margin-top: 24px; }
+
+/* ── Inline link ── */
+.link {
+  color: #f4f4f5;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px; background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: color .25s, background-size .35s ease;
+  padding-bottom: 2px;
+}
+.link:hover { color: #38bdf8; background-size: 100% 1px; }
+
+/* ── Section number ── */
+.num {
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #52525b; font-weight: 500;
+}
+
+/* ── Reveal on scroll ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal[data-d="1"] { transition-delay: .06s; }
+.reveal[data-d="2"] { transition-delay: .12s; }
+.reveal[data-d="3"] { transition-delay: .18s; }
+.reveal[data-d="4"] { transition-delay: .24s; }
+
+/* ── Cursor glow trail ── */
+.cursor-glow {
+  position: fixed; top: 0; left: 0; width: 360px; height: 360px;
+  border-radius: 50%; pointer-events: none; z-index: 0;
+  background: radial-gradient(closest-side, rgba(56,189,248,0.10), rgba(56,189,248,0) 70%);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+@media (hover: none), (pointer: coarse) { .cursor-glow { display: none; } }
+
+/* ── Typing caret ── */
+.typed-caret {
+  display: inline-block; width: 3px; height: 0.95em;
+  background: #38bdf8; vertical-align: -2px; margin-left: 6px;
+  animation: caret 1.05s steps(2) infinite;
+}
+@keyframes caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+/* ── Skill bars ── */
+.sk-row { display: block; }
+.sk-name { font-size: 13.5px; color: #f4f4f5; letter-spacing: 0.02em; padding: 5px 0; }
+.sk-track {
+  position: relative; height: 6px; background: rgba(244,244,245,0.06);
+  border-radius: 999px; overflow: hidden;
+}
+.sk-fill {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+  background: linear-gradient(90deg, rgba(56,189,248,0.5), #38bdf8);
+  border-radius: 999px;
+  transition: width 1.4s cubic-bezier(.2,.7,.2,1);
+  box-shadow: 0 0 12px rgba(56,189,248,0.5);
+}
+.sk-fill::after {
+  content: ""; position: absolute; right: 0; top: -2px; bottom: -2px;
+  width: 2px; background: #38bdf8; box-shadow: 0 0 8px #38bdf8;
+  opacity: 0.7;
+}
+.sk-pct { font-size: 11px; color: #71717a; text-align: right; }
+
+/* ── Flip project cards ── */
+.flip { perspective: 1200px; }
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+  transform: rotateY(0);
+}
+.flip:hover .flip-inner, .flip:focus-within .flip-inner { transform: rotateY(180deg); }
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back {
+  position: absolute; inset: 0; transform: rotateY(180deg);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 20px 0;
+}
+@media (hover: none), (pointer: coarse) {
+  .flip:hover .flip-inner, .flip:focus-within .flip-inner { transform: rotateY(0); }
+  .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+}
+
+/* ── Timeline drawing line ── */
+.timeline { position: relative; padding-left: 32px; }
+.timeline-rail {
+  position: absolute; left: 7px; top: 6px; bottom: 6px;
+  width: 1px; background: rgba(244,244,245,0.08);
+}
+.timeline-fill {
+  position: absolute; left: 0; top: 0; width: 100%;
+  background: #38bdf8; height: 0;
+  box-shadow: 0 0 8px rgba(56,189,248,0.6);
+  transition: height .25s cubic-bezier(.2,.7,.2,1);
+}
+.timeline-node {
+  position: absolute; left: -32px; top: 6px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #030303; border: 1px solid rgba(244,244,245,0.18);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .35s ease, box-shadow .35s ease;
+}
+.timeline-node::after {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(244,244,245,0.18); transition: background-color .35s ease, box-shadow .35s ease;
+}
+.timeline-item.lit .timeline-node { border-color: #38bdf8; box-shadow: 0 0 12px rgba(56,189,248,0.45); }
+.timeline-item.lit .timeline-node::after { background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
+
+/* ── Project repo arrow ── */
+.prj-arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #71717a; flex-shrink: 0;
+  transition: color .25s ease, transform .25s ease;
+}
+.prj-arrow:hover { color: #38bdf8; transform: translate(3px, -3px); }
+
+/* ── Project card thumbnail ── */
+.prj-img {
+  display: block; width: 128px;
+  aspect-ratio: 16 / 9;
+  margin: 4px 0 0;
+  border: 1px solid rgba(244,244,245,0.10);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(244,244,245,0.03);
+  flex-shrink: 0;
+}
+.prj-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 640px) {
+  .prj-img { width: 96px; }
+}
+
+/* ── DS viz blip ── */
+.ds-blip {
+  display: inline-block; width: 8px; height: 8px; background: #38bdf8;
+  border-radius: 50%; box-shadow: 0 0 10px #38bdf8;
+  animation: dsBlip 1.6s infinite;
+}
+@keyframes dsBlip {
+  0% { box-shadow: 0 0 0 0 rgba(56,189,248,0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(56,189,248,0); }
+  100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
+}
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(56,189,248,0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(56,189,248,0); }
+  100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
+}
+
+/* ── Content fade at top of scroll ── */
+.content-fade {
+  position: sticky; top: 0; z-index: 30;
+  height: 110px; margin-bottom: -110px;
+  background: linear-gradient(to bottom, #030303 0%, rgba(3,3,3,0.85) 50%, rgba(3,3,3,0) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+body.is-scrolled .content-fade { opacity: 1; }
+
+/* ── Disable flip on print/static ── */
+.flip { perspective: none !important; }
+.flip-inner { transform: none !important; transition: none !important; }
+.flip:hover .flip-inner,
+.flip:focus-within .flip-inner,
+.flip.is-flipped .flip-inner { transform: none !important; }
+.flip-back { display: none !important; }
+.flip-face { backface-visibility: visible !important; }
+.sk-fill { transition: none !important; }
