@@ -93,26 +93,94 @@ html { scroll-behavior: smooth; }
 }
 @keyframes caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
 
-/* ── Skill bars ── */
-.sk-row { display: block; }
-.sk-name { font-size: 13.5px; color: #f4f4f5; letter-spacing: 0.02em; padding: 5px 0; }
-.sk-track {
-  position: relative; height: 6px; background: rgba(244,244,245,0.06);
-  border-radius: 999px; overflow: hidden;
+/*
+ ╔═══════════════════════════════════════════════════════════╗
+ ║  CHANGE 4 — Last name italic styling                      ║
+ ║  .name-last controls the "Ganugapenta." line.             ║
+ ║  Edit font-style, color, font-weight here to adjust look. ║
+ ╚═══════════════════════════════════════════════════════════╝
+*/
+.name-last {
+  font-style: italic;
+  font-weight: 300;
+  color: #a1a1aa;           /* ink2 — slightly dimmer than the first line */
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
-.sk-fill {
-  position: absolute; left: 0; top: 0; bottom: 0; width: 0;
-  background: linear-gradient(90deg, rgba(56,189,248,0.5), #38bdf8);
+
+/*
+ ╔═══════════════════════════════════════════════════════════╗
+ ║  CHANGE 3 — Skills section: context-based, no bars        ║
+ ║  .sk-heading — category label                             ║
+ ║  .sk-list    — container with border lines                ║
+ ║  .sk-item    — one row: skill name + where used           ║
+ ║  .sk-name    — skill name (left / top)                    ║
+ ║  .sk-ctx     — context text (right / below)              ║
+ ║  To change: edit the .sk-name color or .sk-ctx color.    ║
+ ╚═══════════════════════════════════════════════════════════╝
+*/
+.sk-heading {
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #71717a;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.sk-list {
+  border-top: 1px solid rgba(244,244,245,0.06);
+}
+.sk-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(244,244,245,0.06);
+}
+@media (min-width: 640px) {
+  .sk-item {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+  }
+}
+.sk-name {
+  font-size: 14px;
+  color: #f4f4f5;
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 165px;
+  letter-spacing: 0.005em;
+}
+.sk-ctx {
+  font-size: 13px;
+  color: #71717a;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/*
+ ╔══════════════════════════════════════════════════════════╗
+ ║  CHANGE 2 — Education tags                               ║
+ ║  .edu-tag — pill tag for individual courses.             ║
+ ║  To change color: edit border-color and color values.   ║
+ ╚══════════════════════════════════════════════════════════╝
+*/
+.edu-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 13px;
+  border: 1px solid rgba(244,244,245,0.13);
   border-radius: 999px;
-  transition: width 1.4s cubic-bezier(.2,.7,.2,1);
-  box-shadow: 0 0 12px rgba(56,189,248,0.5);
+  color: #a1a1aa;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: border-color .25s ease, color .25s ease;
 }
-.sk-fill::after {
-  content: ""; position: absolute; right: 0; top: -2px; bottom: -2px;
-  width: 2px; background: #38bdf8; box-shadow: 0 0 8px #38bdf8;
-  opacity: 0.7;
+.edu-tag:hover {
+  border-color: rgba(56,189,248,0.35);
+  color: #38bdf8;
 }
-.sk-pct { font-size: 11px; color: #71717a; text-align: right; }
 
 /* ── Flip project cards ── */
 .flip { perspective: 1200px; }
@@ -135,6 +203,29 @@ html { scroll-behavior: smooth; }
 @media (hover: none), (pointer: coarse) {
   .flip:hover .flip-inner, .flip:focus-within .flip-inner { transform: rotateY(0); }
   .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+}
+
+/*
+ ╔══════════════════════════════════════════════════════════╗
+ ║  CHANGE 1 — Project image: updated for side-by-side     ║
+ ║  layout. Image is now 150px wide, 4:3 aspect ratio.     ║
+ ║  To make it bigger: increase width value.               ║
+ ║  To change shape: edit aspect-ratio (e.g. 16/9, 1/1).  ║
+ ╚══════════════════════════════════════════════════════════╝
+*/
+.prj-img {
+  display: block;
+  width: 150px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(244,244,245,0.10);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(244,244,245,0.03);
+  flex-shrink: 0;
+}
+.prj-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 640px) {
+  .prj-img { width: 96px; }
 }
 
 /* ── Timeline drawing line ── */
@@ -171,39 +262,6 @@ html { scroll-behavior: smooth; }
 }
 .prj-arrow:hover { color: #38bdf8; transform: translate(3px, -3px); }
 
-/* ── Project card thumbnail ── */
-.prj-img {
-  display: block; width: 128px;
-  aspect-ratio: 16 / 9;
-  margin: 4px 0 0;
-  border: 1px solid rgba(244,244,245,0.10);
-  border-radius: 6px;
-  overflow: hidden;
-  background: rgba(244,244,245,0.03);
-  flex-shrink: 0;
-}
-.prj-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-@media (max-width: 640px) {
-  .prj-img { width: 96px; }
-}
-
-/* ── DS viz blip ── */
-.ds-blip {
-  display: inline-block; width: 8px; height: 8px; background: #38bdf8;
-  border-radius: 50%; box-shadow: 0 0 10px #38bdf8;
-  animation: dsBlip 1.6s infinite;
-}
-@keyframes dsBlip {
-  0% { box-shadow: 0 0 0 0 rgba(56,189,248,0.55); }
-  70% { box-shadow: 0 0 0 10px rgba(56,189,248,0); }
-  100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
-}
-@keyframes pulseDot {
-  0% { box-shadow: 0 0 0 0 rgba(56,189,248,0.6); }
-  70% { box-shadow: 0 0 0 10px rgba(56,189,248,0); }
-  100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
-}
-
 /* ── Content fade at top of scroll ── */
 .content-fade {
   position: sticky; top: 0; z-index: 30;
@@ -215,12 +273,19 @@ html { scroll-behavior: smooth; }
 }
 body.is-scrolled .content-fade { opacity: 1; }
 
-/* ── Disable flip on print/static ── */
-.flip { perspective: none !important; }
-.flip-inner { transform: none !important; transition: none !important; }
-.flip:hover .flip-inner,
-.flip:focus-within .flip-inner,
-.flip.is-flipped .flip-inner { transform: none !important; }
-.flip-back { display: none !important; }
-.flip-face { backface-visibility: visible !important; }
-.sk-fill { transition: none !important; }
+/*
+ ╔══════════════════════════════════════════════════════════╗
+ ║  BUG FIX — Flip cards were permanently disabled by       ║
+ ║  styles that should only apply on @media print.          ║
+ ║  Now correctly scoped to print only.                     ║
+ ╚══════════════════════════════════════════════════════════╝
+*/
+@media print {
+  .flip { perspective: none !important; }
+  .flip-inner { transform: none !important; transition: none !important; }
+  .flip:hover .flip-inner,
+  .flip:focus-within .flip-inner,
+  .flip.is-flipped .flip-inner { transform: none !important; }
+  .flip-back { display: none !important; }
+  .flip-face { backface-visibility: visible !important; }
+}
