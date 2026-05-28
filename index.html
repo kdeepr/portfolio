@@ -42,9 +42,20 @@
     <!-- ═══════════ LEFT · STATIONARY ANCHOR ═══════════ -->
     <aside class="lg:sticky lg:top-0 lg:h-screen lg:py-20 flex flex-col justify-between">
       <div>
-        <!-- ── Name + title ── EDIT YOUR NAME HERE ── -->
-        <h1 class="text-ink tracking-tightest leading-[0.92] font-extrabold text-[44px] sm:text-[56px] lg:text-[68px] xl:text-[76px]">Kuladeep Roy
-Ganugapenta.</h1>
+
+        <!--
+        ╔══════════════════════════════════════════════╗
+        ║  CHANGE 4 — Name split into two styled lines  ║
+        ║  "Kuladeep Roy" — bold, full size             ║
+        ║  "Ganugapenta." — italic, lighter, smaller    ║
+        ╚══════════════════════════════════════════════╝
+        To change: edit the two <span> texts below.
+        To adjust sizes: change the text-[Xpx] classes.
+        -->
+        <h1 class="tracking-tightest leading-[0.9]">
+          <span class="block text-ink font-extrabold text-[44px] sm:text-[54px] lg:text-[66px] xl:text-[74px]">Kuladeep Roy</span>
+          <span class="name-last block text-[34px] sm:text-[42px] lg:text-[52px] xl:text-[58px] mt-2">Ganugapenta.</span>
+        </h1>
 
         <!-- Section tracker nav -->
         <nav class="mt-14 hidden lg:block" aria-label="In-page">
@@ -60,7 +71,7 @@ Ganugapenta.</h1>
         </nav>
       </div>
 
-      <!-- ── Social links ── EDIT YOUR LINKS HERE ── -->
+      <!-- ── Social links ── -->
       <ul class="mt-10 lg:mt-10 flex items-center gap-7">
         <li><a class="glow text-ink2 hover:text-accent block" href="https://github.com/kdeepr" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2 2 16.7 4.9 20.5 8.9 21.8c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.6C22 6.6 17.5 2 12 2Z"/></svg>
@@ -68,7 +79,11 @@ Ganugapenta.</h1>
         <li><a class="glow text-ink2 hover:text-accent block" href="https://www.linkedin.com/in/kuladeep-roy-813854210/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6.5 0h3.8v1.71h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.09V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-4V9Z"/></svg>
         </a></li>
-        <li><a class="glow text-ink2 hover:text-accent block" href="mailto:kuladeeproy1@gmail.com" aria-label="Email" title="Email">
+        <!--
+          CHANGE 7 (partial) — email updated to GVSU address in social icon too
+          To change email: update href="mailto:..." below
+        -->
+        <li><a class="glow text-ink2 hover:text-accent block" href="mailto:ganugapk@mail.gvsu.edu" aria-label="Email" title="Email">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         </a></li>
       </ul>
@@ -80,14 +95,12 @@ Ganugapenta.</h1>
 
       <!-- ══════════════════════════════════════════════
            01 — ABOUT
-           ── EDIT YOUR BIO TEXT HERE ──
       ══════════════════════════════════════════════ -->
       <section id="about" class="section mb-28 lg:mb-32 reveal">
         <div class="num mb-6">01 — About</div>
-        <p class="text-ink text-[21px] lg:text-[23px] leading-[1.55] font-light tracking-tight max-w-[58ch]" style="font-size: 35px">
+        <p class="text-ink leading-[1.55] font-light tracking-tight max-w-[58ch]" style="font-size: 35px">
           I was an infrastructure analyst who realized the real job was always about the data.
         </p>
-
         <p class="mt-12 text-ink2 text-[16px] leading-[1.85] font-light max-w-[60ch] reveal" data-d="2">
           Before grad school, I spent three years at <a href="#experience" class="link">DXC Technology</a> running point on the data behind a <span class="text-ink">700+ device enterprise environment</span> — incident streams, SLA traces, server &amp; SAN performance, capacity forecasts. The signal was always there; my job was to drag it out and put it where someone could act on it.
         </p>
@@ -101,11 +114,9 @@ Ganugapenta.</h1>
 
       <!-- ══════════════════════════════════════════════
            02 — EXPERIENCE
-           ── EDIT YOUR EXPERIENCE HERE ──
       ══════════════════════════════════════════════ -->
       <section id="experience" class="section mb-28 lg:mb-32">
         <div class="num mb-10 reveal">02 — Experience</div>
-
         <div class="timeline" id="timeline">
           <div class="timeline-rail"><div class="timeline-fill" id="timelineFill"></div></div>
 
@@ -155,38 +166,48 @@ Ganugapenta.</h1>
 
       <!-- ══════════════════════════════════════════════
            03 — PROJECTS
-           ── EDIT YOUR PROJECTS HERE ──
-           Each project has a front (visible) and back (hover to reveal)
-           To add a project image: put it in the images/ folder
-           and update the src="images/your-image.png" below
+           CHANGE 1 — Image and title now on the same row.
+           Structure for each project front face:
+             <div class="flex gap-5 items-start">   ← ROW WRAPPER
+               <div class="prj-img ...">image</div>  ← IMAGE LEFT
+               <div class="flex-1">                  ← TITLE RIGHT
+                 <h3>Title + arrow</h3>
+                 <p>date · category</p>
+               </div>
+             </div>
+             <p class="mt-5">description</p>
+             <p>tech tags</p>
       ══════════════════════════════════════════════ -->
       <section id="projects" class="section mb-28 lg:mb-32">
         <div class="num mb-10 reveal">03 — Projects</div>
 
-        <div class="space-y-10">
+        <div class="space-y-12">
 
           <!-- PROJECT 1 · AI Image Retrieval -->
           <article class="flip reveal" data-d="1" tabindex="0">
-            <div class="flip-inner min-h-[260px]">
+            <div class="flip-inner min-h-[200px]">
               <div class="flip-face">
-                <h3 class="text-ink text-[22px] lg:text-[24px] font-semibold tracking-tight flex items-baseline gap-3">
-                  <span>AI-Powered Image Retrieval with Vector Databases</span>
-                  <a href="https://github.com/kdeepr/AI-Powered-Image-Retrieval-Vector-Database" target="_blank" rel="noopener" class="prj-arrow" aria-label="Open repo on GitHub" title="GitHub repo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                  </a>
-                </h3>
-                <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-                  2025 &nbsp;&middot;&nbsp; End-to-end pipeline
-                </p>
-                <!-- ── Project image: replace src with your image path ── -->
-                <div class="prj-img mt-4">
-                  <img src="images/ai-image-retrieval.png" alt="AI Image Retrieval app screenshot" />
+                <div class="flex gap-5 items-start">
+                  <div class="prj-img flex-shrink-0">
+                    <img src="images/ai-image-retrieval.png" alt="AI Image Retrieval app screenshot" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-ink text-[19px] lg:text-[21px] font-semibold tracking-tight flex items-start gap-2 flex-wrap leading-snug">
+                      <span>AI-Powered Image Retrieval with Vector Databases</span>
+                      <a href="https://github.com/kdeepr/AI-Powered-Image-Retrieval-Vector-Database" target="_blank" rel="noopener" class="prj-arrow flex-shrink-0 mt-0.5" aria-label="GitHub repo">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                      </a>
+                    </h3>
+                    <p class="text-ink3 text-[12px] tracking-[0.05em] uppercase font-medium mt-1.5">
+                      2025 &nbsp;&middot;&nbsp; End-to-end pipeline
+                    </p>
+                  </div>
                 </div>
-                <p class="mt-5 text-ink2 text-[15.5px] leading-[1.85] font-light max-w-[62ch]">
+                <p class="mt-5 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
                   Embedding-based similarity search on a <span class="text-ink">10,000+ image dataset</span> with <span class="text-ink">sub-second query response</span>. FAISS for approximate nearest-neighbor lookup, PCA &amp; t-SNE for embedding-space diagnostics so I could actually tell whether the model was clustering anything meaningful.
                 </p>
-                <p class="mt-5 text-ink3 text-[13px] tracking-[0.04em] font-light">
-                  Python &nbsp;·&nbsp; FAISS &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; PCA &nbsp;·&nbsp; t-SNE &nbsp;·&nbsp; Docker
+                <p class="mt-4 text-ink3 text-[13px] tracking-[0.04em] font-light">
+                  Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; FAISS &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; PCA &nbsp;·&nbsp; t-SNE &nbsp;·&nbsp; Docker
                 </p>
               </div>
               <div class="flip-back flip-face">
@@ -200,7 +221,7 @@ Ganugapenta.</h1>
                 <ul class="text-ink2 text-[13px] leading-[1.7] font-light space-y-1">
                   <li>FAISS IVF-Flat index + cosine sim · k = 8 retrieval</li>
                   <li>ResNet18 transfer learning · 128-dim embeddings</li>
-                  <li>Streamlit web app · single-command demo</li>
+                  <li>Streamlit web app · single-command Docker demo</li>
                 </ul>
                 <div class="mt-5 flex gap-5">
                   <a href="https://github.com/kdeepr/AI-Powered-Image-Retrieval-Vector-Database" class="link text-ink font-medium">GitHub →</a>
@@ -211,24 +232,28 @@ Ganugapenta.</h1>
 
           <!-- PROJECT 2 · K-12 GLM -->
           <article class="flip reveal" data-d="2" tabindex="0">
-            <div class="flip-inner min-h-[260px]">
+            <div class="flip-inner min-h-[200px]">
               <div class="flip-face">
-                <h3 class="text-ink text-[22px] lg:text-[24px] font-semibold tracking-tight flex items-baseline gap-3">
-                  <span>Predicting K–12 Academic Success with Generalized Linear Models</span>
-                  <a href="https://github.com/kdeepr/Predicting-k-12-Success-using-generalized-linear-models" target="_blank" rel="noopener" class="prj-arrow" aria-label="Open repo on GitHub" title="GitHub repo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                  </a>
-                </h3>
-                <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-                  2025 &nbsp;&middot;&nbsp; Policy-relevant insights
-                </p>
-                <div class="prj-img mt-4">
-                  <img src="images/k12-glm.png" alt="K-12 GLM analysis results" />
+                <div class="flex gap-5 items-start">
+                  <div class="prj-img flex-shrink-0">
+                    <img src="images/k12-glm.png" alt="K-12 GLM analysis results" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-ink text-[19px] lg:text-[21px] font-semibold tracking-tight flex items-start gap-2 flex-wrap leading-snug">
+                      <span>Predicting K–12 Academic Success with Generalized Linear Models</span>
+                      <a href="https://github.com/kdeepr/Predicting-k-12-Success-using-generalized-linear-models" target="_blank" rel="noopener" class="prj-arrow flex-shrink-0 mt-0.5">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                      </a>
+                    </h3>
+                    <p class="text-ink3 text-[12px] tracking-[0.05em] uppercase font-medium mt-1.5">
+                      2025 &nbsp;&middot;&nbsp; Policy-relevant insights
+                    </p>
+                  </div>
                 </div>
-                <p class="mt-5 text-ink2 text-[15.5px] leading-[1.85] font-light max-w-[62ch]">
+                <p class="mt-5 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
                   Engineered features from <span class="text-ink">U.S. Census education data</span> and built GLMs in R (tidymodels) to quantify the socioeconomic factors that actually move student performance across school districts. <span class="text-ink">AIC-based model selection</span> and cross-validation kept accuracy honest without trading away interpretability.
                 </p>
-                <p class="mt-5 text-ink3 text-[13px] tracking-[0.04em] font-light">
+                <p class="mt-4 text-ink3 text-[13px] tracking-[0.04em] font-light">
                   R &nbsp;·&nbsp; tidymodels &nbsp;·&nbsp; GLM &nbsp;·&nbsp; AIC &nbsp;·&nbsp; Cross-validation &nbsp;·&nbsp; U.S. Census
                 </p>
               </div>
@@ -237,7 +262,7 @@ Ganugapenta.</h1>
                 <div class="grid grid-cols-3 gap-x-4 gap-y-2 max-w-md mb-6">
                   <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">5-fold</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">cv</div></div>
                   <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">AIC</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">selection</div></div>
-                  <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">72</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">features</div></div>
+                  <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">3</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">glm variants</div></div>
                 </div>
                 <div class="text-ink3 text-[10.5px] tracking-[0.25em] uppercase font-medium mb-2">Key drivers</div>
                 <ul class="text-ink2 text-[13px] leading-[1.7] font-light space-y-1">
@@ -255,25 +280,29 @@ Ganugapenta.</h1>
 
           <!-- PROJECT 3 · Gun Violence Analysis -->
           <article class="flip reveal" data-d="3" tabindex="0">
-            <div class="flip-inner min-h-[260px]">
+            <div class="flip-inner min-h-[200px]">
               <div class="flip-face">
-                <h3 class="text-ink text-[22px] lg:text-[24px] font-semibold tracking-tight flex items-baseline gap-3">
-                  <span>Gun Violence &amp; U.S. Census Data Analysis</span>
-                  <a href="https://github.com/kdeepr/US-gun-data-analysis-in-R" target="_blank" rel="noopener" class="prj-arrow" aria-label="Open repo on GitHub" title="GitHub repo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                  </a>
-                </h3>
-                <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-                  2024 &nbsp;&middot;&nbsp; Demographic analysis
-                </p>
-                <div class="prj-img mt-4">
-                  <img src="images/gun-violence-map.png" alt="Gun violence incident map across the United States" />
+                <div class="flex gap-5 items-start">
+                  <div class="prj-img flex-shrink-0">
+                    <img src="images/gun-violence-map.png" alt="Gun violence incident map" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-ink text-[19px] lg:text-[21px] font-semibold tracking-tight flex items-start gap-2 flex-wrap leading-snug">
+                      <span>Gun Violence &amp; U.S. Census Data Analysis</span>
+                      <a href="https://github.com/kdeepr/US-gun-data-analysis-in-R" target="_blank" rel="noopener" class="prj-arrow flex-shrink-0 mt-0.5">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                      </a>
+                    </h3>
+                    <p class="text-ink3 text-[12px] tracking-[0.05em] uppercase font-medium mt-1.5">
+                      2024 &nbsp;&middot;&nbsp; Geospatial &amp; demographic analysis
+                    </p>
+                  </div>
                 </div>
-                <p class="mt-5 text-ink2 text-[15.5px] leading-[1.85] font-light max-w-[62ch]">
-                  Joined U.S. gun-violence incident records with Census demographic variables in R to surface the geographic and socioeconomic patterns underneath the headline numbers. Visualizations and statistical summaries written for a non-technical audience — because that's where the conversation actually happens.
+                <p class="mt-5 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
+                  Joined U.S. gun-violence incident records with Census demographic variables in R to surface the geographic and socioeconomic patterns underneath the headline numbers. Monte Carlo permutation testing for statistical rigor, choropleth maps and a Quarto report written for a non-technical audience.
                 </p>
-                <p class="mt-5 text-ink3 text-[13px] tracking-[0.04em] font-light">
-                  R &nbsp;·&nbsp; ggplot2 &nbsp;·&nbsp; tidyverse &nbsp;·&nbsp; Demographic analysis
+                <p class="mt-4 text-ink3 text-[13px] tracking-[0.04em] font-light">
+                  R &nbsp;·&nbsp; ggplot2 &nbsp;·&nbsp; Quarto &nbsp;·&nbsp; Leaflet &nbsp;·&nbsp; Monte Carlo &nbsp;·&nbsp; tidyverse
                 </p>
               </div>
               <div class="flip-back flip-face">
@@ -281,13 +310,13 @@ Ganugapenta.</h1>
                 <div class="grid grid-cols-3 gap-x-4 gap-y-2 max-w-md mb-6">
                   <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">50</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">states</div></div>
                   <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">67K+</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">incidents</div></div>
-                  <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">p&lt;.05</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">result</div></div>
+                  <div><div class="text-accent text-[28px] font-extrabold tracking-tightest leading-none">5K</div><div class="text-ink3 text-[10.5px] tracking-[0.15em] uppercase mt-1">MC iters</div></div>
                 </div>
                 <div class="text-ink3 text-[10.5px] tracking-[0.25em] uppercase font-medium mb-2">Method</div>
                 <ul class="text-ink2 text-[13px] leading-[1.7] font-light space-y-1">
                   <li>Monte Carlo permutation test · 5,000 iterations</li>
                   <li>Choropleth + Leaflet interactive map in R</li>
-                  <li>Plain-language summary for non-technical readers</li>
+                  <li>Plain-language Quarto report for non-technical readers</li>
                 </ul>
                 <div class="mt-5 flex gap-5">
                   <a href="https://github.com/kdeepr/US-gun-data-analysis-in-R" class="link text-ink font-medium">GitHub →</a>
@@ -299,24 +328,28 @@ Ganugapenta.</h1>
 
           <!-- PROJECT 4 · Soil Moisture Kaggle -->
           <article class="flip reveal" data-d="4" tabindex="0">
-            <div class="flip-inner min-h-[260px]">
+            <div class="flip-inner min-h-[200px]">
               <div class="flip-face">
-                <h3 class="text-ink text-[22px] lg:text-[24px] font-semibold tracking-tight flex items-baseline gap-3">
-                  <span>Soil Moisture Predictive Modeling — Kaggle</span>
-                  <a href="https://github.com/kdeepr/Soil-Moisture-Predictive-Modeling-Kaggle" target="_blank" rel="noopener" class="prj-arrow" aria-label="Open repo on GitHub" title="GitHub repo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                  </a>
-                </h3>
-                <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-                  2025 &nbsp;&middot;&nbsp; Time-series forecasting
-                </p>
-                <div class="prj-img mt-4">
-                  <img src="images/soil-moisture.png" alt="Soil moisture prediction results" />
+                <div class="flex gap-5 items-start">
+                  <div class="prj-img flex-shrink-0">
+                    <img src="images/soil-moisture.png" alt="Soil moisture prediction results" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-ink text-[19px] lg:text-[21px] font-semibold tracking-tight flex items-start gap-2 flex-wrap leading-snug">
+                      <span>Soil Moisture Predictive Modeling — Kaggle</span>
+                      <a href="https://github.com/kdeepr/Soil-Moisture-Predictive-Modeling-Kaggle" target="_blank" rel="noopener" class="prj-arrow flex-shrink-0 mt-0.5">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                      </a>
+                    </h3>
+                    <p class="text-ink3 text-[12px] tracking-[0.05em] uppercase font-medium mt-1.5">
+                      2025 &nbsp;&middot;&nbsp; Time-series forecasting
+                    </p>
+                  </div>
                 </div>
-                <p class="mt-5 text-ink2 text-[15.5px] leading-[1.85] font-light max-w-[62ch]">
+                <p class="mt-5 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
                   93-day soil moisture forecast using a delta-modeling strategy — predicting daily change rather than absolute values to prevent error compounding. Inverse-RMSE weighted ensemble of 5 models with 72 engineered features from lag structures and precipitation interactions.
                 </p>
-                <p class="mt-5 text-ink3 text-[13px] tracking-[0.04em] font-light">
+                <p class="mt-4 text-ink3 text-[13px] tracking-[0.04em] font-light">
                   Python &nbsp;·&nbsp; LightGBM &nbsp;·&nbsp; scikit-learn &nbsp;·&nbsp; Time Series &nbsp;·&nbsp; Ensemble methods
                 </p>
               </div>
@@ -340,27 +373,95 @@ Ganugapenta.</h1>
             </div>
           </article>
 
+          <!--
+          ╔══════════════════════════════════════════════════════════╗
+          ║  CHANGE 5 — ADD MORE PROJECTS HERE                       ║
+          ║  Copy the block below and fill in your repo details.     ║
+          ║  Update: title, GitHub link, year, description, tags,    ║
+          ║  and the flip-back metrics section.                      ║
+          ║  Also put a screenshot in images/ and update src="".    ║
+          ╚══════════════════════════════════════════════════════════╝
+
+          <article class="flip reveal" data-d="5" tabindex="0">
+            <div class="flip-inner min-h-[200px]">
+              <div class="flip-face">
+                <div class="flex gap-5 items-start">
+                  <div class="prj-img flex-shrink-0">
+                    <img src="images/YOUR-IMAGE.png" alt="Project screenshot" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-ink text-[19px] lg:text-[21px] font-semibold tracking-tight flex items-start gap-2 flex-wrap leading-snug">
+                      <span>YOUR PROJECT TITLE</span>
+                      <a href="https://github.com/kdeepr/YOUR-REPO" target="_blank" rel="noopener" class="prj-arrow flex-shrink-0 mt-0.5">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                      </a>
+                    </h3>
+                    <p class="text-ink3 text-[12px] tracking-[0.05em] uppercase font-medium mt-1.5">
+                      YEAR &nbsp;&middot;&nbsp; TYPE OF ANALYSIS
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-5 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
+                  YOUR DESCRIPTION HERE
+                </p>
+                <p class="mt-4 text-ink3 text-[13px] tracking-[0.04em] font-light">
+                  Tech · Stack · Here
+                </p>
+              </div>
+              <div class="flip-back flip-face">
+                <div class="mt-5 flex gap-5">
+                  <a href="https://github.com/kdeepr/YOUR-REPO" class="link text-ink font-medium">GitHub →</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          -->
+
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════
            04 — EDUCATION
-           ── EDIT YOUR EDUCATION HERE ──
+           CHANGE 2 — GVSU section expanded with coursework
+           tags and descriptive paragraphs.
+           To add/remove course tags: edit the <span class="edu-tag"> items.
+           To edit the paragraphs: edit the <p> blocks below the tags.
       ══════════════════════════════════════════════ -->
       <section id="education" class="section mb-28 lg:mb-32">
         <div class="num mb-10 reveal">04 — Education</div>
 
-        <div class="space-y-12">
+        <div class="space-y-14">
+
           <article class="reveal" data-d="1">
             <h3 class="text-ink text-[20px] lg:text-[22px] font-semibold tracking-tight">
               M.S. Data Science &amp; Analytics
             </h3>
             <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-              2024 — Expected December 2026 &nbsp;&middot;&nbsp; Allendale, MI
+              2024 — Expected December 2026 &nbsp;&middot;&nbsp; Grand Valley State University &nbsp;&middot;&nbsp; Allendale, MI
             </p>
-            <p class="mt-3 text-ink2 text-[15px] leading-[1.8] font-light max-w-[60ch]">
-              <span class="text-ink">Grand Valley State University.</span> GPA <span class="text-ink">3.06 / 4.0</span>. Coursework in Statistical Modeling, Machine Learning, Data Engineering, and Data Visualization.
+            <p class="mt-4 text-ink2 text-[15px] leading-[1.8] font-light max-w-[60ch]">
+              GPA <span class="text-ink">3.06 / 4.0.</span> A technically rigorous program at the intersection of statistics, machine learning, and data systems — the formal framework for work I was already doing intuitively.
             </p>
+
+            <div class="mt-6">
+              <p class="text-ink3 text-[11px] tracking-[0.28em] uppercase font-medium mb-3">Relevant Coursework</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="edu-tag">Statistical Modeling</span>
+                <span class="edu-tag">Machine Learning</span>
+                <span class="edu-tag">Data Engineering</span>
+                <span class="edu-tag">Data Visualization</span>
+                <span class="edu-tag">Regression Analysis</span>
+                <span class="edu-tag">Applied Statistics</span>
+                <span class="edu-tag">Database Systems</span>
+                <span class="edu-tag">Big Data Analytics</span>
+              </div>
+            </div>
+
+            <div class="mt-8 space-y-4 text-ink2 text-[15px] leading-[1.85] font-light max-w-[62ch]">
+              <p>Applied statistical modeling and GLMs in R — logistic regression, Poisson models, AIC-driven selection — building the interpretability foundation that sits underneath the ML work.</p>
+              <p>Built end-to-end ML pipelines in Python for real datasets: 93-day time-series forecasting for soil moisture, embedding-based image retrieval at 10K+ scale, and supervised classification for educational outcomes.</p>
+              <p>Used <span class="text-ink">Quarto and R Markdown</span> to build reproducible, publication-ready analyses — the kind non-technical stakeholders can actually open and read, not just notebooks that live in a repo forever.</p>
+            </div>
           </article>
 
           <article class="reveal" data-d="2">
@@ -368,11 +469,10 @@ Ganugapenta.</h1>
               B.Tech, Mechanical Engineering
             </h3>
             <p class="text-ink3 text-[13px] tracking-[0.05em] uppercase font-medium mt-1">
-              2017 — May 2021 &nbsp;&middot;&nbsp; Chennai, India
+              2017 — May 2021 &nbsp;&middot;&nbsp; Vel Tech R&amp;D Institute &nbsp;&middot;&nbsp; Chennai, India
             </p>
             <p class="mt-3 text-ink2 text-[15px] leading-[1.8] font-light max-w-[60ch]">
-              <span class="text-ink">Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology.</span>
-              Where I learned to take a system apart and put it back together — a habit that turned out to apply to data pipelines too.
+              Where I learned to take a system apart and put it back together — a habit that turned out to apply to data pipelines just as well.
             </p>
           </article>
         </div>
@@ -380,61 +480,117 @@ Ganugapenta.</h1>
 
       <!-- ══════════════════════════════════════════════
            05 — SKILLS
-           ── EDIT SKILL PERCENTAGES HERE ──
-           Change data-pct="90" to your level (0-100)
+           CHANGE 3 — No percentage bars. Each skill shows
+           the name on the left and where it was used on the right.
+           To add a skill: copy a <div class="sk-item"> block.
+           To add a new category: copy a full <div> group with <h4>.
       ══════════════════════════════════════════════ -->
       <section id="skills" class="section mb-28 lg:mb-32">
         <div class="num mb-10 reveal">05 — Skills</div>
 
-        <div class="grid md:grid-cols-2 gap-x-14 gap-y-12 reveal" data-d="1" id="skillsGrid">
+        <div class="space-y-10 reveal" data-d="1">
 
           <div>
-            <h4 class="text-ink3 text-[12px] tracking-[0.3em] uppercase font-medium mb-5">Languages</h4>
-            <div class="space-y-3" data-sk-group>
-              <div class="sk-row"><div class="sk-name">Python</div><div class="sk-track"><div class="sk-fill" data-pct="92"></div></div><div class="sk-pct">92%</div></div>
-              <div class="sk-row"><div class="sk-name">SQL</div><div class="sk-track"><div class="sk-fill" data-pct="88"></div></div><div class="sk-pct">88%</div></div>
-              <div class="sk-row"><div class="sk-name">R</div><div class="sk-track"><div class="sk-fill" data-pct="84"></div></div><div class="sk-pct">84%</div></div>
-              <div class="sk-row"><div class="sk-name">MATLAB</div><div class="sk-track"><div class="sk-fill" data-pct="62"></div></div><div class="sk-pct">62%</div></div>
+            <h4 class="sk-heading">Languages</h4>
+            <div class="sk-list">
+              <div class="sk-item">
+                <span class="sk-name">Python</span>
+                <span class="sk-ctx">Soil moisture forecasting &nbsp;·&nbsp; AI image retrieval &nbsp;·&nbsp; GVSU ML coursework &nbsp;·&nbsp; DXC automation</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">SQL</span>
+                <span class="sk-ctx">DXC Technology — ITSM queries, incident reporting, SLA tracking &nbsp;·&nbsp; database coursework</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">R</span>
+                <span class="sk-ctx">K-12 GLM analysis &nbsp;·&nbsp; US Gun Violence study &nbsp;·&nbsp; GVSU statistical modeling &amp; regression coursework</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">MATLAB</span>
+                <span class="sk-ctx">Undergraduate mechanical engineering simulations and numerical analysis</span>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-ink3 text-[12px] tracking-[0.3em] uppercase font-medium mb-5">Libraries &amp; ML</h4>
-            <div class="space-y-3" data-sk-group>
-              <div class="sk-row"><div class="sk-name">Pandas / NumPy</div><div class="sk-track"><div class="sk-fill" data-pct="92"></div></div><div class="sk-pct">92%</div></div>
-              <div class="sk-row"><div class="sk-name">Scikit-learn</div><div class="sk-track"><div class="sk-fill" data-pct="84"></div></div><div class="sk-pct">84%</div></div>
-              <div class="sk-row"><div class="sk-name">FAISS</div><div class="sk-track"><div class="sk-fill" data-pct="80"></div></div><div class="sk-pct">80%</div></div>
-              <div class="sk-row"><div class="sk-name">tidymodels</div><div class="sk-track"><div class="sk-fill" data-pct="82"></div></div><div class="sk-pct">82%</div></div>
-              <div class="sk-row"><div class="sk-name">Matplotlib</div><div class="sk-track"><div class="sk-fill" data-pct="86"></div></div><div class="sk-pct">86%</div></div>
+            <h4 class="sk-heading">Machine Learning &amp; Libraries</h4>
+            <div class="sk-list">
+              <div class="sk-item">
+                <span class="sk-name">Pandas &amp; NumPy</span>
+                <span class="sk-ctx">All Python projects — data preprocessing, feature engineering, and EDA pipelines</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">Scikit-learn</span>
+                <span class="sk-ctx">Soil moisture ensemble (Ridge, RF, Extra Trees, GBM) &nbsp;·&nbsp; K-12 feature pipelines</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">LightGBM</span>
+                <span class="sk-ctx">Soil moisture Kaggle — inverse-RMSE weighted ensemble, 5-fold TimeSeriesSplit CV</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">PyTorch</span>
+                <span class="sk-ctx">AI image retrieval — ResNet18 transfer learning, 128-dim embedding extraction</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">FAISS</span>
+                <span class="sk-ctx">AI image retrieval — IVF-Flat approximate nearest-neighbor index at 10K+ scale</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">tidymodels</span>
+                <span class="sk-ctx">K-12 GLM — model specification, AIC selection, cross-validation workflows in R</span>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-ink3 text-[12px] tracking-[0.3em] uppercase font-medium mb-5">Visualization &amp; BI</h4>
-            <div class="space-y-3" data-sk-group>
-              <div class="sk-row"><div class="sk-name">Power BI</div><div class="sk-track"><div class="sk-fill" data-pct="90"></div></div><div class="sk-pct">90%</div></div>
-              <div class="sk-row"><div class="sk-name">Tableau</div><div class="sk-track"><div class="sk-fill" data-pct="76"></div></div><div class="sk-pct">76%</div></div>
-              <div class="sk-row"><div class="sk-name">Plotly</div><div class="sk-track"><div class="sk-fill" data-pct="74"></div></div><div class="sk-pct">74%</div></div>
-              <div class="sk-row"><div class="sk-name">Observable</div><div class="sk-track"><div class="sk-fill" data-pct="64"></div></div><div class="sk-pct">64%</div></div>
+            <h4 class="sk-heading">Visualization &amp; BI</h4>
+            <div class="sk-list">
+              <div class="sk-item">
+                <span class="sk-name">Power BI</span>
+                <span class="sk-ctx">DXC Technology — incident trend dashboards, SLA compliance reporting, KPI tracking (700+ devices)</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">Tableau</span>
+                <span class="sk-ctx">GVSU data visualization coursework — dashboard design and storytelling</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">Streamlit</span>
+                <span class="sk-ctx">AI image retrieval — interactive demo app, single-command Docker deployment</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">ggplot2 &amp; Plotly</span>
+                <span class="sk-ctx">US Gun Violence choropleth maps &nbsp;·&nbsp; K-12 GLM diagnostic plots &nbsp;·&nbsp; GVSU coursework</span>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-ink3 text-[12px] tracking-[0.3em] uppercase font-medium mb-5">Data &amp; Cloud</h4>
-            <div class="space-y-3" data-sk-group>
-              <div class="sk-row"><div class="sk-name">MySQL</div><div class="sk-track"><div class="sk-fill" data-pct="82"></div></div><div class="sk-pct">82%</div></div>
-              <div class="sk-row"><div class="sk-name">MongoDB</div><div class="sk-track"><div class="sk-fill" data-pct="72"></div></div><div class="sk-pct">72%</div></div>
-              <div class="sk-row"><div class="sk-name">Databricks</div><div class="sk-track"><div class="sk-fill" data-pct="66"></div></div><div class="sk-pct">66%</div></div>
-              <div class="sk-row"><div class="sk-name">AWS</div><div class="sk-track"><div class="sk-fill" data-pct="70"></div></div><div class="sk-pct">70%</div></div>
-              <div class="sk-row"><div class="sk-name">Docker</div><div class="sk-track"><div class="sk-fill" data-pct="74"></div></div><div class="sk-pct">74%</div></div>
+            <h4 class="sk-heading">Data Infrastructure &amp; Cloud</h4>
+            <div class="sk-list">
+              <div class="sk-item">
+                <span class="sk-name">AWS</span>
+                <span class="sk-ctx">DXC Technology — cloud-hosted infrastructure monitoring &nbsp;·&nbsp; AWS Certified Cloud Practitioner (2023)</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">MySQL &amp; MongoDB</span>
+                <span class="sk-ctx">Academic database coursework — relational querying and document-store data modeling</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">Docker</span>
+                <span class="sk-ctx">AI image retrieval — containerized Streamlit app for reproducible single-command demo</span>
+              </div>
+              <div class="sk-item">
+                <span class="sk-name">Databricks</span>
+                <span class="sk-ctx">GVSU data engineering coursework — distributed data processing and Spark workflows</span>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════
            06 — CERTIFICATIONS
-           ── EDIT YOUR CERTIFICATIONS HERE ──
       ══════════════════════════════════════════════ -->
       <section id="certs" class="section mb-28 lg:mb-32">
         <div class="num mb-10 reveal">06 — Certifications</div>
@@ -453,56 +609,27 @@ Ganugapenta.</h1>
 
       <!-- ══════════════════════════════════════════════
            07 — CONTACT
-           ── EDIT YOUR EMAIL AND AVAILABILITY HERE ──
+           CHANGE 7 — "Let's connect" headline + GVSU email.
+           CHANGE 6 — Live telemetry strip removed entirely.
+           To change the headline: edit the text inside <h2>.
+           To change the email: update both href="mailto:..." and the visible text.
       ══════════════════════════════════════════════ -->
-      <section id="contact" class="section pb-20">
+      <section id="contact" class="section pb-28">
         <div class="num mb-10 reveal">07 — Contact</div>
 
         <div class="reveal" data-d="1">
           <h2 class="text-ink text-[36px] sm:text-[44px] lg:text-[52px] font-extrabold tracking-tightest leading-[1.05] max-w-[18ch]">
-            Let's build <a class="link" href="mailto:kuladeeproy1@gmail.com">something</a>.
+            Let's <a class="link" href="mailto:ganugapk@mail.gvsu.edu">connect</a>.
           </h2>
           <p class="mt-6 text-ink2 text-[16px] leading-[1.8] font-light max-w-[58ch]">
             I'm actively looking for a <span class="text-ink">data analytics or data science internship</span> for <span class="text-ink">Summer / Fall 2026</span> — remote, hybrid, or onsite in West Michigan. If you've got messy data and need someone who can ship a model and then explain it, I'm your person.
           </p>
           <p class="mt-5 text-ink3 text-[15px] leading-[1.8] font-light">
-            Reach me at <a class="link" href="mailto:kuladeeproy1@gmail.com">kuladeeproy1@gmail.com</a>.
+            Reach me at <a class="link" href="mailto:ganugapk@mail.gvsu.edu">ganugapk@mail.gvsu.edu</a>.
           </p>
         </div>
 
-        <!-- Live telemetry strip -->
-        <div class="mt-20 reveal" data-d="2">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="block w-1.5 h-1.5 rounded-full bg-accent" style="box-shadow:0 0 8px #38bdf8; animation: pulseDot 1.6s infinite;"></span>
-            <span class="text-ink3 text-[10.5px] tracking-[0.3em] uppercase font-medium">Live telemetry &nbsp;·&nbsp; portfolio.signal</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-            <div>
-              <div class="flex items-baseline justify-between mb-2">
-                <span class="text-ink3 text-[10px] tracking-[0.25em] uppercase font-medium">Model loss</span>
-                <span class="text-accent text-[11px] tracking-tight font-mono" id="metricLoss">0.0000</span>
-              </div>
-              <canvas id="cvLoss" class="block w-full h-[80px]"></canvas>
-            </div>
-            <div>
-              <div class="flex items-baseline justify-between mb-2">
-                <span class="text-ink3 text-[10px] tracking-[0.25em] uppercase font-medium">Predictions · R²</span>
-                <span class="text-accent text-[11px] tracking-tight font-mono" id="metricR2">0.000</span>
-              </div>
-              <canvas id="cvScatter" class="block w-full h-[80px]"></canvas>
-            </div>
-            <div>
-              <div class="flex items-baseline justify-between mb-2">
-                <span class="text-ink3 text-[10px] tracking-[0.25em] uppercase font-medium">Feature importance</span>
-                <span class="text-accent text-[11px] tracking-tight font-mono" id="metricFeat">f0..f5</span>
-              </div>
-              <canvas id="cvBars" class="block w-full h-[80px]"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <p class="mt-20 text-ink4 text-[12px] tracking-[0.2em] uppercase font-light">
+        <p class="mt-20 text-ink4 text-[12px] tracking-[0.2em] uppercase font-light reveal" data-d="2">
           © 2026 Kuladeep Roy Ganugapenta &nbsp;·&nbsp; Grand Rapids, MI &nbsp;·&nbsp; Inter &amp; Tailwind
         </p>
       </section>
