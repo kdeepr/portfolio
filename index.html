@@ -221,13 +221,48 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
     </div>
   </div>
 </nav>
+<!-- ===== CONSTRUCTION BANNER — delete this whole block when site is ready ===== -->
+<div id="construction-banner">
+  <span>
+    🚧 this website is still under construction — please visit later 🚧 &nbsp;&nbsp;&nbsp;
+    🚧 this website is still under construction — please visit later 🚧 &nbsp;&nbsp;&nbsp;
+  </span>
+</div>
+
+<style>
+  #construction-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a2b4a;        /* navy — matches your site */
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 9999;
+  }
+
+  #construction-banner span {
+    display: inline-block;
+    animation: banner-scroll 18s linear infinite;
+  }
+
+  @keyframes banner-scroll {
+    from { transform: translateX(100vw); }
+    to   { transform: translateX(-100%); }
+  }
+</style>
+<!-- ===== END CONSTRUCTION BANNER ===== -->
 
 <!-- ================= HERO — EDIT: name, role, summary, links ================= -->
 <header class="hero">
   <div class="wrap">
     <span class="hero-tag">Data Science &amp; Analytics</span>
     <h2 class="marquee">
-  <span>this website is still under construction please visit later</span>
 </h2>
     <h2>Kuladeep Roy Ganugapenta</h2>
     <p class="hero-role">Data Science &amp; Analytics student and ML Practitioner. Turning raw data into answers people can actually use.</p>
