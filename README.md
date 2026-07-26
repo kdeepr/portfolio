@@ -4,7 +4,6 @@ A single-file portfolio (`index.html`). No frameworks, no build step, no depende
 
 ---
 
-## Deploy to Vercel (5 minutes)
 
 **Option A — GitHub (recommended, auto-updates on every push)**
 1. Create a new GitHub repo, e.g. `portfolio` (public or private).
