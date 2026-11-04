@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-     <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kuladeep Roy Ganugapenta — Data Science &amp; Analytics</title>
+<meta name="description" content="Portfolio of Kuladeep Roy Ganugapenta — M.S. Data Science & Analytics at Grand Valley State University. Python, R, SQL, ML pipelines, and BI dashboards." />
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEEN16N4LJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZEEN16N4LJ');
 </script>
-       <title>www.kuladeeproy.com</title>
-</head>
-<body>
-  ...
-</body>
-</html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kuladeep Roy Ganugapenta Data Science & Analytics</title>
-<meta name="description" content="Portfolio of Kuladeep Roy Ganugapenta — M.S. Data Science & Analytics at Grand Valley State University. Python, R, SQL, ML pipelines, and BI dashboards." />
-
-<!-- ============================================================
-     HOW TO EDIT THIS SITE
-     1. Colors        → change the variables in :root below
-     2. Your info     → search for "EDIT:" comments in the HTML
-     3. Add a project → copy one <article class="project"> block
-     4. Deploy        → push this folder to GitHub, import on vercel.com
-     ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -239,43 +222,6 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
     </div>
   </div>
 </nav>
-<!-- ===== CONSTRUCTION BANNER — delete this whole block when site is ready ===== -->
-<div id="construction-banner">
-  <span>
-    🚧 this website is still under construction — please visit later 🚧 &nbsp;&nbsp;&nbsp;
-    🚧 this website is still under construction — please visit later 🚧 &nbsp;&nbsp;&nbsp;
-  </span>
-</div>
-
-<style>
-  #construction-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #1a2b4a;        /* navy — matches your site */
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    padding: 8px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    z-index: 9999;
-  }
-
-  #construction-banner span {
-    display: inline-block;
-    animation: banner-scroll 18s linear infinite;
-  }
-
-  @keyframes banner-scroll {
-    from { transform: translateX(100vw); }
-    to   { transform: translateX(-100%); }
-  }
-</style>
-<!-- ===== END CONSTRUCTION BANNER ===== -->
-
 <!-- ================= HERO — EDIT: name, role, summary, links ================= -->
 <header class="hero">
   <div class="wrap">
@@ -298,7 +244,7 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
       <div class="fact"><strong>3 yrs</strong><small>Industry experience</small></div>
       <div class="fact"><strong>700+</strong><small>Devices monitored at DXC</small></div>
       <div class="fact"><strong>3.68</strong><small>GPA — M.S. DSA, GVSU</small></div>
-      <div class="fact"><strong>6</strong><small>End-to-end projects</small></div>
+      <div class="fact"><strong>11</strong><small>End-to-end projects</small></div>
     </div>
   </div>
 </header>
@@ -364,7 +310,37 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
     <div class="projects-grid">
 
       <article class="project">
-        <h3>LRC Guide — AI Front-Desk Assistant</h3>
+        <h3>
+          <a href="https://github.com/kdeepr/marketing-analytics" target="_blank" rel="noopener noreferrer">
+            Marketing Analytics — Term Deposit Propensity
+          </a>
+        </h3>
+        <p>End-to-end pipeline on a real bank telemarketing campaign: leakage-aware feature engineering, a propensity-to-subscribe model, SQL-based campaign reporting, and a Power BI dashboard — Python, SQL, and R only.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> Python · scikit-learn · SQL · R · Power BI<br />
+          <b>RESULT&nbsp;</b> <span>0.813 ROC-AUC, leakage-free; prior engagement predicts 65% vs 9% conversion</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/Finz-pipeline" target="_blank" rel="noopener noreferrer">
+            Finz — Accounting Data Pipeline
+          </a>
+        </h3>
+        <p>A full-stack pipeline that ingests raw bank transactions, classifies them with a rule engine plus a Gemini fallback, generates a cash-basis P&amp;L, and syncs to QuickBooks Online — reconciled against QuickBooks' own report.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> FastAPI · MongoDB · React · Gemini · QuickBooks API<br />
+          <b>RESULT&nbsp;</b> <span>120+ tests passing end-to-end against the full challenge dataset</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/Language-Resource-center-AI-Assistant" target="_blank" rel="noopener noreferrer">
+            LRC Guide — AI Front-Desk Assistant
+          </a>
+        </h3>
         <p>A 24/7 chat assistant for GVSU's Language Resource Center. Non-technical staff update the knowledge base in Google Sheets; the pipeline grounds every answer in it — no hallucinated policies, no robotic tone.</p>
         <div class="row">
           <b>STACK&nbsp;&nbsp;</b> n8n · Gemini 2.5 · LangChain · Sheets<br />
@@ -372,21 +348,38 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
         </div>
       </article>
 
-<article class="project">
-  <h3>
-    <a href="https://github.com/kdeepr/AI-Powered-Image-Retrieval-Vector-Database" target="_blank" rel="noopener noreferrer">
-      AI-Powered Image Retrieval
-    </a>
-  </h3>
-  <p>End-to-end similarity search over 10,000+ images: ResNet18 embeddings, a FAISS IVF-Flat index, and an interactive Streamlit UI — fully containerized with Docker.</p>
-  <div class="row">
-    <b>STACK&nbsp;&nbsp;</b> PyTorch · FAISS · Streamlit · Docker<br />
-    <b>RESULT&nbsp;</b> <span>Sub-second queries at 10K+ scale</span>
-  </div>
-</article>
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/ai-job-source-agent" target="_blank" rel="noopener noreferrer">
+            AI Job Source Agent
+          </a>
+        </h3>
+        <p>Given a LinkedIn job posting, finds the company's careers page and one live open position on it — across arbitrary site layouts and ATS platforms — using cheap heuristics first and falling back to Claude only when a page is ambiguous.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> Python · Playwright · Claude · RapidAPI<br />
+          <b>RESULT&nbsp;</b> <span>Generalizes across custom sites, Greenhouse, Lever, Workday, Ashby</span>
+        </div>
+      </article>
 
       <article class="project">
-        <h3>Soil Moisture Forecasting — Kaggle</h3>
+        <h3>
+          <a href="https://github.com/kdeepr/AI-Powered-Image-Retrieval-Vector-Database" target="_blank" rel="noopener noreferrer">
+            AI-Powered Image Retrieval
+          </a>
+        </h3>
+        <p>End-to-end similarity search over 10,000+ images: ResNet18 embeddings, a FAISS IVF-Flat index, and an interactive Streamlit UI — fully containerized with Docker.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> PyTorch · FAISS · Streamlit · Docker<br />
+          <b>RESULT&nbsp;</b> <span>Sub-second queries at 10K+ scale</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/Soil-Moisture-Predictive-Modeling" target="_blank" rel="noopener noreferrer">
+            Soil Moisture Forecasting — Kaggle
+          </a>
+        </h3>
         <p>A 93-day recursive forecast using a delta-modeling strategy to prevent error compounding, with 72 engineered features and an inverse-RMSE weighted ensemble of five models.</p>
         <div class="row">
           <b>STACK&nbsp;&nbsp;</b> LightGBM · scikit-learn · Time series<br />
@@ -395,7 +388,24 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
       </article>
 
       <article class="project">
-        <h3>Predicting K–12 Academic Success</h3>
+        <h3>
+          <a href="https://github.com/kdeepr/india-students-dashboard" target="_blank" rel="noopener noreferrer">
+            Indian Students in the U.S. — Dashboard
+          </a>
+        </h3>
+        <p>Tracks the 363,000+ Indian students enrolled in U.S. higher ed — enrollment trends by year, field-of-study mix (88% STEM), OPT status, and gender split — a single zero-backend HTML page built on IIE Open Doors, SEVIS/DHS, and NSF data.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> JavaScript · Chart.js · HTML/CSS<br />
+          <b>RESULT&nbsp;</b> <span>Single-file dashboard covering 5 years of enrollment data</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/Predicting-k-12-Success-using-generalized-linear-models" target="_blank" rel="noopener noreferrer">
+            Predicting K–12 Academic Success
+          </a>
+        </h3>
         <p>Logistic and Poisson GLMs on U.S. Census education data quantifying which socioeconomic factors predict student performance — tuned with AIC selection and 5-fold cross-validation.</p>
         <div class="row">
           <b>STACK&nbsp;&nbsp;</b> R · tidymodels · GLM · Quarto<br />
@@ -404,7 +414,24 @@ footer .sub{ color:var(--dim); max-width:520px; margin:0 auto 34px; font-size:15
       </article>
 
       <article class="project">
-        <h3>Gun Violence &amp; U.S. Census Analysis</h3>
+        <h3>
+          <a href="https://github.com/kdeepr/Exploratory-Data-Analysis-on-Layoffs-and-Impact-on-AI" target="_blank" rel="noopener noreferrer">
+            Layoffs &amp; the Rise of AI — EDA
+          </a>
+        </h3>
+        <p>Examines global workforce layoffs (2020–2023) alongside AI's parallel growth — where layoffs hit hardest, which tech companies drove 2022's cuts, and how AI market value and adoption moved as the cuts did.</p>
+        <div class="row">
+          <b>STACK&nbsp;&nbsp;</b> Python · pandas · Plotly · scikit-learn<br />
+          <b>RESULT&nbsp;</b> <span>Connects workforce disruption to AI adoption curves across 4 datasets</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>
+          <a href="https://github.com/kdeepr/US-gun-violence-data-analysis-in-R" target="_blank" rel="noopener noreferrer">
+            Gun Violence &amp; U.S. Census Analysis
+          </a>
+        </h3>
         <p>Integrated 67,000+ incident records with Census demographics to map geographic and socioeconomic patterns across all 50 states, validated with Monte Carlo permutation testing.</p>
         <div class="row">
           <b>STACK&nbsp;&nbsp;</b> R · ggplot2 · Leaflet · Monte Carlo<br />
